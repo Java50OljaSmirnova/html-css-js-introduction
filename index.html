@@ -4,28 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/chessboard.css">
     <title>Document</title>
 </head>
 <body>
-    <a href="https://www.meetup.com/ru-RU/" style="display: block; text-align: center; margin-top: 200px;">
-        <img src="images/page1.jpg" style="width: 50px;">
-        <label style="width: 400px; display: inline-block; text-align: left; font-size: 32px;">Java meetup Israel</label>
-    </a>
-    <a href="https://www.google.com/" style="display: block; text-align: center">
-        <img src="images/page2.jpg" style="width: 50px;">
-        <label style="width: 400px; display: inline-block; text-align: left; font-size: 32px;">Google</label>
-    </a>
-    <a href="https://www.meetup.com/ru-RU/javascript-israel/" style="display: block; text-align: center">
-        <img src="images/page3.jpg" style="width: 50px;">
-        <label style="width: 400px; display: inline-block; text-align: left; font-size: 32px;">JavaScript  meetup Israel</label>
-     </a>
-    <a href="https://www.meetup.com/ru-RU/topics/html/il/" style="display: block; text-align: center">
-        <img src="images/page4.jpg" style="width: 50px;">
-        <label style="width: 400px; display: inline-block; text-align: left; font-size: 32px;">HTML meetup Israel </label>
-    </a>
-    <a href="https://www.meetup.com/ru-RU/react-il/" style="display: block; text-align: center">
-        <img src="images/page5.jpg" style="width: 60px;;">
-        <label style="width: 400px; display: inline-block; text-align: left; font-size: 32px;">React meetup Israel</label> 
-    </a>
+    <main class="board">
+        <section class="board-row">
+            <div class="corner"></div>
+            <div class="frame-Up-Down"><p class="symbol">a</p></div>
+            <div class="frame-Up-Down"><p class="symbol">b</p></div>
+            <div class="frame-Up-Down"><p class="symbol">c</p></div>
+            <div class="frame-Up-Down"><p class="symbol">d</p></div>
+            <div class="frame-Up-Down"><p class="symbol">e</p></div>
+            <div class="frame-Up-Down"><p class="symbol">f</p></div>
+            <div class="frame-Up-Down"><p class="symbol">g</p></div>
+            <div class="frame-Up-Down"><p class="symbol">h</p></div>
+            <div class="corner"></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">1</p></div>
+            <div class="cell-black"><p class="chess-white">♖</p></div>
+            <div class="cell-white"><p class="chess-white">♘</p></div>
+            <div class="cell-black"><p class="chess-white">♗</p></div>
+            <div class="cell-white"><p class="chess-white">♕</p> </div>
+            <div class="cell-black"><p class="chess-white">♔</p></div>
+            <div class="cell-white"><p class="chess-white">♗</p></div>
+            <div class="cell-black"><p class="chess-white">♘</p></div>
+            <div class="cell-white"><p class="chess-white">♖</p></div>
+            <div class="frame-side"><p class="symbol">1</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">2</p></div>
+            <div class="cell-white"><p class="chess-white">♙</p></div>
+            <div class="cell-black"><p class="chess-white">♙</p></div>
+            <div class="cell-white"><p class="chess-white">♙</p></div>
+            <div class="cell-black"><p class="chess-white">♙</p></div>
+            <div class="cell-white"><p class="chess-white">♙</p></div>
+            <div class="cell-black"><p class="chess-white">♙</p></div>
+            <div class="cell-white"><p class="chess-white">♙</p></div>
+            <div class="cell-black"><p class="chess-white">♙</p></div>
+            <div class="frame-side"><p class="symbol">2</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">3</p></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"> </div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="frame-side"><p class="symbol">3</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">4</p></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"> </div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="frame-side"><p class="symbol">4</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">5</p></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"> </div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="frame-side"><p class="symbol">5</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">6</p></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"> </div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="cell-white"></div>
+            <div class="cell-black"></div>
+            <div class="frame-side"><p class="symbol">6</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">7</p></div>
+            <div class="cell-black"><p class="chess-black">♟︎</p></div>
+            <div class="cell-white"><p class="chess-black">♟︎</p></div>
+            <div class="cell-black"><p class="chess-black">♟︎</p></div>
+            <div class="cell-white"><p class="chess-black">♟︎</p></div>
+            <div class="cell-black"><p class="chess-black">♟︎</p></div>
+            <div class="cell-white"><p class="chess-black">♟︎</p></div>
+            <div class="cell-black"><p class="chess-black">♟︎</p></div>
+            <div class="cell-white"><p class="chess-black">♟︎</p></div>
+            <div class="frame-side"><p class="symbol">7</p></div>
+        </section>
+        <section class="board-row">
+            <div class="frame-side"><p class="symbol">8</p></div>
+            <div class="cell-white"><p class="chess-black">♜</p></div>
+            <div class="cell-black"><p class="chess-black">♞</p></div>
+            <div class="cell-white"><p class="chess-black">♝</p></div>
+            <div class="cell-black"><p class="chess-black">♚</p></div>
+            <div class="cell-white"><p class="chess-black">♛</p></div>
+            <div class="cell-black"><p class="chess-black">♝</p></div>
+            <div class="cell-white"><p class="chess-black">♞</p></div>
+            <div class="cell-black"><p class="chess-black">♜</p></div> 
+            <div class="frame-side"><p class="symbol">8</p></div>      
+        </section>
+        <section class="board-row">
+            <div class="corner"></div>
+            <div class="frame-Up-Down"><p class="symbol">a</p></div>
+            <div class="frame-Up-Down"><p class="symbol">b</p></div>
+            <div class="frame-Up-Down"><p class="symbol">c</p></div>
+            <div class="frame-Up-Down"><p class="symbol">d</p></div>
+            <div class="frame-Up-Down"><p class="symbol">e</p></div>
+            <div class="frame-Up-Down"><p class="symbol">f</p></div>
+            <div class="frame-Up-Down"><p class="symbol">g</p></div>
+            <div class="frame-Up-Down"><p class="symbol">h</p></div>
+            <div class="corner"></div>
+        </section>
+    </main>
 </body>
 </html>
