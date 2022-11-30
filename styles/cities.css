@@ -1,0 +1,81 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: rgb(212, 189, 250);
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+.logo{
+    display: block;
+    text-align: center;
+    background-color: rgb(167, 173, 255);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-top: solid 2px rgb(11, 94, 149);
+    border-bottom: solid 2px rgb(11, 94, 149);
+}
+.main-class{
+    display: flex;
+    flex-direction: column;
+}
+.details-container{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details-image{
+    width: 60vw;
+    height: 50vw;
+    margin-bottom: 1vh;
+    border: solid 2px rgb(11, 94, 149);
+}
+.details-title{
+    display: block;
+    background-color: rgb(175, 180, 250);
+    width: 45vw;
+    text-align: center;
+    border: solid 2px rgb(11, 94, 149);
+}
+.thumbnails-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 26vh;
+    overflow-y: scroll;
+    list-style: none;
+    justify-content: space-around;
+    padding-left: 0;
+}
+.thumbnails-anchor{
+
+}
+.thumbnails-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2px rgb(11, 94, 149);
+    margin: 0vw;
+    margin-top: 2vh;
+    border-radius: 5vw;
+}
+.thumbnails-image{
+    width: 25vw;
+    height: 15vw;
+    border-top-left-radius: 4.5vw;
+    border-top-right-radius: 4.5vw;
+    margin-bottom: -1.25vw;
+    
+}
+.thumbnails-title{
+    display: block;
+    text-align: center;
+    padding-top: 1vw;
+    background-color: rgb(167, 173, 255);
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    width: 25vw;
+    height: 3vh;
+}

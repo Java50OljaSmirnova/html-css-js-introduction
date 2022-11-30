@@ -1,134 +1,97 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/chessboard.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/cities.css">
+    <link rel="shortcut icon" href="images/faviconCities.png" type="image/x-icon">
+    <title>Cities-Gallery</title>
 </head>
 <body>
-    <main class="board">
-        <section class="board-row">
-            <div class="corner"></div>
-            <div class="frame-Up-Down"><p class="symbol">a</p></div>
-            <div class="frame-Up-Down"><p class="symbol">b</p></div>
-            <div class="frame-Up-Down"><p class="symbol">c</p></div>
-            <div class="frame-Up-Down"><p class="symbol">d</p></div>
-            <div class="frame-Up-Down"><p class="symbol">e</p></div>
-            <div class="frame-Up-Down"><p class="symbol">f</p></div>
-            <div class="frame-Up-Down"><p class="symbol">g</p></div>
-            <div class="frame-Up-Down"><p class="symbol">h</p></div>
-            <div class="corner"></div>
+    <header class="logo">
+        <h2>Cities Gallery</h2>
+    </header>
+    <main class="main-class">
+        <section class="details-container">
+            <img src="images/London.jpg" class="details-image">
+            <span class="details-title">Best Cities</span>
         </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">1</p></div>
-            <div class="cell-black"><p class="chess-white">♖</p></div>
-            <div class="cell-white"><p class="chess-white">♘</p></div>
-            <div class="cell-black"><p class="chess-white">♗</p></div>
-            <div class="cell-white"><p class="chess-white">♕</p> </div>
-            <div class="cell-black"><p class="chess-white">♔</p></div>
-            <div class="cell-white"><p class="chess-white">♗</p></div>
-            <div class="cell-black"><p class="chess-white">♘</p></div>
-            <div class="cell-white"><p class="chess-white">♖</p></div>
-            <div class="frame-side"><p class="symbol">1</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">2</p></div>
-            <div class="cell-white"><p class="chess-white">♙</p></div>
-            <div class="cell-black"><p class="chess-white">♙</p></div>
-            <div class="cell-white"><p class="chess-white">♙</p></div>
-            <div class="cell-black"><p class="chess-white">♙</p></div>
-            <div class="cell-white"><p class="chess-white">♙</p></div>
-            <div class="cell-black"><p class="chess-white">♙</p></div>
-            <div class="cell-white"><p class="chess-white">♙</p></div>
-            <div class="cell-black"><p class="chess-white">♙</p></div>
-            <div class="frame-side"><p class="symbol">2</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">3</p></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"> </div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="frame-side"><p class="symbol">3</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">4</p></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"> </div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="frame-side"><p class="symbol">4</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">5</p></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"> </div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="frame-side"><p class="symbol">5</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">6</p></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"> </div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="cell-white"></div>
-            <div class="cell-black"></div>
-            <div class="frame-side"><p class="symbol">6</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">7</p></div>
-            <div class="cell-black"><p class="chess-black">♟︎</p></div>
-            <div class="cell-white"><p class="chess-black">♟︎</p></div>
-            <div class="cell-black"><p class="chess-black">♟︎</p></div>
-            <div class="cell-white"><p class="chess-black">♟︎</p></div>
-            <div class="cell-black"><p class="chess-black">♟︎</p></div>
-            <div class="cell-white"><p class="chess-black">♟︎</p></div>
-            <div class="cell-black"><p class="chess-black">♟︎</p></div>
-            <div class="cell-white"><p class="chess-black">♟︎</p></div>
-            <div class="frame-side"><p class="symbol">7</p></div>
-        </section>
-        <section class="board-row">
-            <div class="frame-side"><p class="symbol">8</p></div>
-            <div class="cell-white"><p class="chess-black">♜</p></div>
-            <div class="cell-black"><p class="chess-black">♞</p></div>
-            <div class="cell-white"><p class="chess-black">♝</p></div>
-            <div class="cell-black"><p class="chess-black">♚</p></div>
-            <div class="cell-white"><p class="chess-black">♛</p></div>
-            <div class="cell-black"><p class="chess-black">♝</p></div>
-            <div class="cell-white"><p class="chess-black">♞</p></div>
-            <div class="cell-black"><p class="chess-black">♜</p></div> 
-            <div class="frame-side"><p class="symbol">8</p></div>      
-        </section>
-        <section class="board-row">
-            <div class="corner"></div>
-            <div class="frame-Up-Down"><p class="symbol">a</p></div>
-            <div class="frame-Up-Down"><p class="symbol">b</p></div>
-            <div class="frame-Up-Down"><p class="symbol">c</p></div>
-            <div class="frame-Up-Down"><p class="symbol">d</p></div>
-            <div class="frame-Up-Down"><p class="symbol">e</p></div>
-            <div class="frame-Up-Down"><p class="symbol">f</p></div>
-            <div class="frame-Up-Down"><p class="symbol">g</p></div>
-            <div class="frame-Up-Down"><p class="symbol">h</p></div>
-            <div class="corner"></div>
-        </section>
+        <ul class="thumbnails-list">
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/London.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">London</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Paris.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Paris</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Florency.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Florence</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Tokyo.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Tokyo</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/NY.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">New York</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/RJ.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Rio de Janeiro</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/London.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">London</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Paris.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Paris</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Florency.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Florence</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/Tokyo.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Tokyo</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/NY.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">New York</span>
+                </a>
+            </li>
+            <li class="thumbnails-item">
+                <a class="thumbnails-anchor" href="#">
+                    <img src="images/RJ.jpg" class="thumbnails-image" >
+                    <span class="thumbnails-title">Rio de Janeiro</span>
+                </a>
+            </li>
+        </ul>
+        
     </main>
 </body>
 </html>
