@@ -22,28 +22,27 @@ body{
     flex-direction: column;
 }
 .details-container{
-    margin-top: 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .details-image{
-    width: 60vw;
+    width: 100%;
     height: 50vw;
-    margin-bottom: 1vh;
     border: solid 2px rgb(11, 94, 149);
 }
 .details-title{
     display: block;
     background-color: rgb(175, 180, 250);
-    width: 45vw;
+    width: 100%;
+    height: 5vh;
     text-align: center;
     border: solid 2px rgb(11, 94, 149);
+    font-size: 1.5em;
 }
 .thumbnails-list{
     display: flex;
     flex-wrap: wrap;
-    max-height: 26vh;
     overflow-y: scroll;
     list-style: none;
     justify-content: space-around;
@@ -55,18 +54,15 @@ body{
 .thumbnails-item{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border: solid 2px rgb(11, 94, 149);
     margin: 0vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
     border-radius: 5vw;
+    overflow: hidden;
 }
 .thumbnails-image{
-    width: 25vw;
-    height: 15vw;
-    border-top-left-radius: 4.5vw;
-    border-top-right-radius: 4.5vw;
-    margin-bottom: -1.25vw;
+    width: 30vw;
+    height: 20vw;
     
 }
 .thumbnails-title{
@@ -74,8 +70,6 @@ body{
     text-align: center;
     padding-top: 1vw;
     background-color: rgb(167, 173, 255);
-    border-bottom-left-radius: 5vw;
-    border-bottom-right-radius: 5vw;
-    width: 25vw;
+    width: 30vw;
     height: 3vh;
 }
