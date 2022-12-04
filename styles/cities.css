@@ -1,3 +1,17 @@
+@font-face {
+    font-family: artist;
+    src: url(fonts/MADETheArtistScript.woff);
+}
+@font-face {
+    font-family: regular;
+    src: url(fonts/MarckScript-Regular.woff);
+}
+
+@font-face {
+    font-family: fog;
+    src: url(fonts/FoglihtenNo06.woff);
+}
+
 html{
     height: 100%;
 }
@@ -12,64 +26,156 @@ body{
     display: block;
     text-align: center;
     background-color: rgb(167, 173, 255);
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-transform: uppercase;
-    border-top: solid 2px rgb(11, 94, 149);
-    border-bottom: solid 2px rgb(11, 94, 149);
+    font-family: fog;
+    
+
 }
+
 .main-class{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-grow: 0.8;
 }
 .details-container{
     display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2vh;
+
 }
 .details-image{
-    width: 100%;
+    width: 98%;
     height: 50vw;
-    border: solid 2px rgb(11, 94, 149);
+    border: solid 3px rgb(11, 94, 149);
+   
 }
+
 .details-title{
     display: block;
     background-color: rgb(175, 180, 250);
-    width: 100%;
+    width: 98%;
     height: 5vh;
     text-align: center;
-    border: solid 2px rgb(11, 94, 149);
-    font-size: 1.5em;
+    border: solid 3px rgb(11, 94, 149);
+    font-size: 2em;
+    font-family: artist;
+    font-weight: bold;
 }
 .thumbnails-list{
     display: flex;
     flex-wrap: wrap;
+    max-height: 45vh;
     overflow-y: scroll;
     list-style: none;
     justify-content: space-around;
     padding-left: 0;
+    margin-top: 2vh;
 }
 .thumbnails-anchor{
+    text-decoration: none;
 
 }
 .thumbnails-item{
-    display: flex;
-    flex-direction: column;
-    border: solid 2px rgb(11, 94, 149);
-    margin: 0vw;
-    margin-top: 1vh;
+    display: block;
+    border: solid 4px rgb(11, 94, 149);
+    margin-top: 2vh;
     border-radius: 5vw;
     overflow: hidden;
+    
 }
 .thumbnails-image{
     width: 30vw;
     height: 20vw;
+    display: block;
+    
     
 }
+
 .thumbnails-title{
     display: block;
     text-align: center;
-    padding-top: 1vw;
     background-color: rgb(167, 173, 255);
-    width: 30vw;
-    height: 3vh;
+    color: black;
+    font-family: regular;
+    font-size: 15px;
+
+}
+@media (min-width: 560px) {
+    .main-class{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    } 
+    h2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .details-image{
+        width: 100%;
+        height: 30vw;
+        border: solid 4px rgb(11, 94, 149); 
+    }
+    .details-title{
+        height: 8vh;
+        text-align:center;
+       background: none;
+       border: none;
+       font-display: center;
+       font-size: 2em;
+    }
+    .thumbnails-list{
+        width: 30vw;
+        order: -1;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 80vh;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .thumbnails-item {
+        min-height: 15vw;
+        width: 22vw;
+    }
+    .thumbnails-image{
+        width: 22vw;
+        height: 12vw;
+        
+    }
+    .thumbnails-title{
+        width: 22vw;
+        height: 3vw;
+        
+    }
+}
+@media (min-width: 1000px){
+    .main-class{
+        flex-grow: 1;
+    } 
+    .logo{
+        font-size: 2em;
+    }
+    h2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .details-image{
+        width: 100%;
+        height: 35vw;
+        border: solid 4px rgb(11, 94, 149); 
+    }
+    .details-title{
+        font-size: 3em;
+    }
+    .thumbnails-list{
+        max-height: 80vh;
+
+    }
+    .thumbnails-title{
+        padding-top: 0.1em;
+        font-size: 25px;
+    }
 }
