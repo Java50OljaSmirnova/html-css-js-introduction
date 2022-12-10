@@ -76,7 +76,7 @@ body {
 
 .details-title {
     display: block;
-    background-color: rgba(175, 180, 250, 0.579);
+    background-color: rgba(175, 180, 250, 0.759);
     height: 5vh;
     width: 110%;
     padding-left: 2vw;
@@ -117,10 +117,12 @@ body {
     max-width: var(--thumbnails-image-width);
    
 }
+
 .thumbnails-item:hover{
     transform: scale(1.1);
     border: solid 4px rgb(149, 11, 124);
 }
+
 
 .thumbnails-image {
     width: var(--thumbnails-image-width);
