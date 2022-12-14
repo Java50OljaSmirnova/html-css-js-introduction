@@ -53,7 +53,9 @@ body {
     justify-content: center;
     flex-grow: 0.8;
 }
-
+.hidden .details-container{
+    display: none;
+}
 .details-container {
     display: flex;
     flex-direction: column;
@@ -62,6 +64,7 @@ body {
     width: 100vw;
 
 }
+
 .details-frame{
     position: relative;
 }
@@ -88,7 +91,17 @@ body {
     bottom: 3vh;
     left: -5vw;
 }
-
+#hide-button{
+    position: absolute;
+    background-color: rgba(148, 148, 156, 0);
+    
+    font-size: 15px;
+    right: 1.5vw;
+    top: 1.5vh;
+}
+.hidden .thumbnails-list{
+    max-height: 70vh;
+}
 .thumbnails-list {
     display: flex;
     flex-wrap: wrap;
@@ -174,17 +187,21 @@ body {
         height: 8vh;
         font-size: 2em;
     }
+    .hidden .thumbnails-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 90vw;
+    }
 
     .thumbnails-list {
-        width: 30vw;
+        max-width: 30vw;
         order: -1;
         flex-direction: column;
         flex-wrap: nowrap;
         max-height: 80vh;
         justify-content: flex-start;
         margin-top: 0;
-        margin-left: 1vw;
-        min-width: calc(var(--thumbnails-image-width) + 7vw);
     }
 
     .thumbnails-item {
@@ -239,9 +256,13 @@ body {
     .details-title {
         font-size: 3em;
     }
+    .hidden .thumbnails-list{
+        max-height: 90vh;
+    }
 
     .thumbnails-list {
         max-height: 80vh;
+        max-width: 25vw;
 
     }
 
