@@ -62,7 +62,13 @@ body {
     align-items: center;
     margin-bottom: 2vh;
     width: 100vw;
+    
+    transition: 2s;
 
+}
+.is-point{
+    transform: scale(0.001);
+    transition: 0s;
 }
 
 .details-frame{
