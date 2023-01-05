@@ -1,55 +1,40 @@
-//HW#13
-function getRandomNumber(min, max) {
-    return min + Math.trunc(Math.random() * (max - min + 1));
+//HW #14(1)
+function coloringString(str1, str2){
+    return str1.length == str2.length ? stringComparison(str1, str2) : "The length of string isn't the same";
+   
 }
-function getRandomMatrix(rows, columns, min, max) {
-    const matrix = [];
-    for (let i = 0; i < rows; i++) {
-        matrix.push([]);
-        for (let j = 0; j < columns; j++) {
-            matrix[i].push(getRandomNumber(min, max));
+function stringComparison(str1, str2){
+    const ar1 = Array.from(str1);
+    const ar2 = Array.from(str2);
+    const arrayColors = ar2.map(function (letter, index){
+        return getColor(letter, index, ar1);
+
+    })
+    return arrayColors;
+}
+function getColor(letter, index, ar1){
+    let color = "";
+    for(let i = 0; i < ar1.length; i++){
+        if(letter === ar1[i] && index == i){
+            color = "green";
+            i = ar1.length;
+        } else if(letter === ar1[i]){
+            color = "yellow";
         }
     }
-    return matrix;
+    return color.length > 1 ?  color : "red";
 }
 
-function getArray(min, max, size) {
-    const ar = new Array(size);
-    for (let i = 0; i < ar.length; i++) {
-        ar[i] = getRandomNumber(min, max);
-    }
-    return ar;
+//HW14 (2)
+function getNumbersWithDigitsAmount(digitsAmount, array) {
+    
+    const arrayGivenNumbers = array.filter(function(number){
+        return String(number).indexOf('-') == 0 ? String(number).length - 1 == digitsAmount : String(number).length == digitsAmount;
+    })
+    return arrayGivenNumbers;
 }
-function getHtmlUl(array) {
-    let list = '', htmlString = '<ul class = "list_class">';
-    for (let i = 0; i < array.length; i++) {
-        const strClass = array[i] === 0 ? 'white' : 'black';
-        list = '<li class = "item_class">' + `<div class="${strClass}"></div>` + '</li> ';
-        htmlString += list;
-    }
-    htmlString += '</ul>';
-    return htmlString;
-}
-
-function matrixTransp(matrix) {
-    let rowLength = matrix.length;
-    let columnsLength = matrix[0].length;
-    const transpMatrix = [];
-    for (let i = 0; i < columnsLength; i++) {
-        transpMatrix.push([]);
-        for (let j = 0; j < rowLength; j++) {
-            transpMatrix[i].push([]);
-            transpMatrix[i][j].push(matrix[j][i]);
-        }
-    }
-    return transpMatrix;
-}
-console.log("HTML string")
-console.log(getHtmlUl(getArray(0, 1, 10)));
-console.log("")
-let matrix = getRandomMatrix(3, 4, 1, 5);
-console.log("matrix is")
-console.log(matrix)
-console.log("")
-console.log("matrix after transporation")
-console.log(matrixTransp(matrix))
+console.log('task 1');
+console.log(coloringString("pappy", "mamy"));
+console.log('');
+console.log('task 2');
+console.log(getNumbersWithDigitsAmount(1, [3, 20, 100, -5, 1000, 345, 56]));
