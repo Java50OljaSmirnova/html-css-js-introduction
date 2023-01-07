@@ -1,40 +1,83 @@
-//HW #14(1)
-function coloringString(str1, str2){
-    return str1.length == str2.length ? stringComparison(str1, str2) : "The length of string isn't the same";
-   
+//HW #15
+//task sort.1
+function evenOddSort(array){
+    const evenArray = array.sort(function(a, b){
+        const firstEven = b%2 === 0;
+        const secondEven = a%2 === 0;
+        if (firstEven){
+            return secondEven ? 0 : 1;
+        } else {
+            return secondEven ? -1 : 0;
+        }  
+    });
+    return evenArray;
 }
-function stringComparison(str1, str2){
-    const ar1 = Array.from(str1);
-    const ar2 = Array.from(str2);
-    const arrayColors = ar2.map(function (letter, index){
-        return getColor(letter, index, ar1);
+console.log(`result of sorting array to even [20, -10, 333, 1000, 552, 7, -7] is ${evenOddSort([20, -10, 333, 1000, 552, 7, -7])}`);
 
-    })
-    return arrayColors;
+//task sort.2
+function oddEvenSort(array){
+    const oddArray = array.sort(function(a, b){
+        const firstEven = b%2 === 0;
+        const secondEven = a%2 === 0;
+        if (!firstEven){
+            return !secondEven ? 0 : 1;
+        } else {
+            return !secondEven ? -1 : 0;
+        }  
+    });
+    return oddArray;
 }
-function getColor(letter, index, ar1){
-    let color = "";
-    for(let i = 0; i < ar1.length; i++){
-        if(letter === ar1[i] && index == i){
-            color = "green";
-            i = ar1.length;
-        } else if(letter === ar1[i]){
-            color = "yellow";
-        }
-    }
-    return color.length > 1 ?  color : "red";
+console.log(`result of sorting array to odd [20, -10, 333, 1000, 552, 7, -7] is ${oddEvenSort([20, -10, 333, 1000, 552, 7, -7])}`);
+
+//task sort.3
+function evenAscOddDesc(array){
+    const evenOddArray = array.sort(function(a, b){
+        const firstEven = b%2 === 0;
+        const secondEven = a%2 === 0;
+        if (firstEven){
+            return secondEven ? a - b : 1;
+        } else {
+            return secondEven ? -1 : b - a;
+        }  
+    });
+    return evenOddArray;
 }
 
-//HW14 (2)
-function getNumbersWithDigitsAmount(digitsAmount, array) {
-    
-    const arrayGivenNumbers = array.filter(function(number){
-        return String(number).indexOf('-') == 0 ? String(number).length - 1 == digitsAmount : String(number).length == digitsAmount;
+console.log(`result of sorting array [20, -10, 333, 1000, 552, 7, -7] is ${evenAscOddDesc([20, -10, 333, 1000, 552, 7, -7])}`);
+
+console.log ('**********************************************************************************************************');
+
+//task reduce.1
+function getMin(array){
+    const res = array.reduce(function(a, b){
+        return a < b? a : b;
     })
-    return arrayGivenNumbers;
+    return res;
 }
-console.log('task 1');
-console.log(coloringString("pappy", "mamy"));
-console.log('');
-console.log('task 2');
-console.log(getNumbersWithDigitsAmount(1, [3, 20, 100, -5, 1000, 345, 56]));
+console.log(`Min element of [20, -10, 333, 1000, 552, 7, -7] is ${getMin([20, -10, 333, 1000, 552, 7, -7])}`);
+
+//task reduce.2
+function getMax(array){
+    const res = array.reduce(function(a, b){
+        return a > b? a : b;
+    })
+    return res;
+}
+console.log(`Max element of [20, -10, 333, 1000, 552, 7, -7] is ${getMax([20, -10, 333, 1000, 552, 7, -7])}`);
+//task reduce.3
+function getAverage(array){
+    const res = array.reduce(function(a, b){
+        return a + b;
+    })
+    return Math.trunc(res / array.length);
+}
+console.log(`Average result of [20, -10, 333, 1000, 552, 7, -7] is ${getAverage([20, -10, 333, 1000, 552, 7, -7])}`);
+//task reduce.4
+function getMinMaxAv(array){
+    let min = getMin(array); 
+    let max = getMax(array);
+    let av = getAverage(array);
+    const res = [min, max, av];
+    return res;
+}
+console.log(`result of finction getMinMaxAv ([20, -10, 333, 1000, 552, 7, -7]) is ${getMinMaxAv([20, -10, 333, 1000, 552, 7, -7])}`);
