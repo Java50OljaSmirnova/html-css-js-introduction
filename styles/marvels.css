@@ -1,0 +1,53 @@
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.word{
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: row;
+}
+.letter{
+    margin-left: 1vw;
+    background-color: black;
+    border: solid 1px black;
+    color: black;
+    width: 4vw;
+    height: 4vw;
+}
+#play-again {
+    font-size: large;
+    border: solid 1px black;
+    width: 10vw;
+    height: 5vw;
+}
+
+#guess-button{
+    font-size: large;
+    border: solid 1px black;
+    width: 10vw;
+    height: 5vw;
+    position: absolute;
+    top: 10vw;
+    right: 20vw;
+}
+#word-input {
+    border: solid 1px black;
+    color: black;
+    width: 15vw;
+    height: 3vw;
+}
+#letter-input {
+    border: solid 1px black;
+    color: black;
+    width: 10vw;
+    height: 3vw;
+}
+#question {
+    font-size: large;
+}
+#result-message{
+    font-size: large;
+}
