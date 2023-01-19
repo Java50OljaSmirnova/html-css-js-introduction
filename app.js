@@ -58,12 +58,14 @@ function getEmployeeNames(employees){
         return empl.name;
     })
     return namesOfEmployees
+
+    //return employees.map(empl => empl.name); looked at another work
 }
 console.log(`Names of all employees: ${getEmployeeNames(employees).join(" , ")}`);
 
 function sortEmployeesByAge(employees){
     const arrayByAge = employees.sort(function(empl1, empl2){
-        return empl1.birthYear - empl2.birthYear;
+        return empl2.birthYear - empl1.birthYear;
     })
     return arrayByAge;
 }
@@ -75,5 +77,7 @@ function computeSalaryBudget(employees){
         return res + empl.salary;
     }, 0)
     return totalSalary;
+    
+    //return employees.reduce((res, empl) => res + empl.salary, 0); looked at another work
 }
 console.log(`Total salary = ${computeSalaryBudget(employees)}`);
